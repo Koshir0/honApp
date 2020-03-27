@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{%  block body %}
+<table border="1" >
+  <tr>
+    <td>Title</td>
+    <td>Author</td>
+
+  </tr>
+  {%for book in books%}
+    <tr>
+     <td> <a href="/bookpage/{{book.isbn}}">{{ book.title }}</a></td>
+     <td>{{ book.author }}</td>
+     <!-- <td>{{ book.isbn }}</td> -->
+    </tr>
+    {%endfor%}
+</table>
+
+
+<li>
+  <a href="{{url_for('search')}}">go to search again</a>
+</li>
+
+{%endblock%}

@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title%}
+   Info Page
+{% endblock %}
+
+
+
+{%block body%}
+<div class="heading">
+   <h1>
+      Book Info
+   </h1>
+</div>
+<div style="width: 45%; float:left; height:75%; margin:10px">
+  
+     <p> Book Title : {{title }}</br>
+   Written By : {{ author}}</br>
+   Book ISBN : {{isbn}}</br>
+   Published in {{ year }}</br>
+   <!-- <h5>{{ review_count }}</h5> -->
+   Book Rating :{{ ratings_count }}</br>
+   Average Rating : {{average_rating}}</br>
+ </p>
+</div> 
+ <div style="width: 45%; float:left; height:75%;  margin:10px">
+    <img src="{{image_url}}" style="height: 250px">
+ </div>
+  
+ 
+ <!--   <form action="review/{{isbn}}"  method="post">
+	   <button>add review</button>
+   </form> -->
+
+
+   <!-- <div style="width: 100px; float:left; height:100px; background:gray; margin:10px">
+First DIV
+</div>
+<div style="width: 100px; float:left; height:100px; background:yellow; margin:10px">
+Second DIV
+</div>
+    -->
+ {% endblock %}

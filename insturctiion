@@ -1,0 +1,29 @@
+# first of all 
+
+/Registration 
+by username and password
+
+/login
+by username and password 
+
+/logout 
+user logout
+
+#import.py books.csv to postgreSQL database 
+
+/search/<int:isbn>
+/search/<string:title>
+/search/<string:author>
+
+to get list of possible matching results or message if not matching
+
+/<string:title>
+info about the book its title, author, publication year, ISBN number, and any reviews that users have left for the book on your website.
+
+/review 
+submit the review about the book to and write an opinion 
+and cannot submit multi review
+
+/api/<isbn>
+return json response containg the title, author, publication date, isbn number review count and average score 
+
