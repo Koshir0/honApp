@@ -40,14 +40,14 @@ def login_required(f):
 
 
 # Check for environment variable
-if not os.getenv("DATABASE_URL"):
-	raise RuntimeError("DATABASE_URL is not set")
+# if not os.getenv("DATABASE_URL"):
+# 	raise RuntimeError("DATABASE_URL is not set")
 
 # Configure session to use filesystem
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
-
+DATABASE_URL = "postgres://vlazbleuhyocwk:1858965a6153097fe2a48781730e3a0786e8419555b196005c49e4666bc52f92@ec2-54-221-210-97.compute-1.amazonaws.com:5432/d7132icqdpnaud"
 # Set up database
 engine = create_engine(os.getenv("DATABASE_URL"))
 db = scoped_session(sessionmaker(bind=engine))
